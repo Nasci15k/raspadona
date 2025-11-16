@@ -1,0 +1,35 @@
+10/08/2025 00:41:52 - PAYLOAD ONDAPAY: Array
+(
+    [status] => PAID_OUT
+    [type_transaction] => CASH_IN
+    [transaction_id] => TRX-20250809214142-4796
+    [amount] => 10
+    [net_amount] => 9
+    [payer] => Array
+        (
+            [document] => 16079556790
+            [name] => admin
+        )
+
+    [external_id] => 6897eac3f31e4
+)
+
+10/08/2025 00:41:52 - ----------------------------------------------------------
+10/08/2025 00:41:52 - INICIANDO PROCESSO PARA TXN: TRX-20250809214142-4796
+10/08/2025 00:41:52 - DEPÓSITO ENCONTRADO: Array
+(
+    [id] => 19
+    [user_id] => 1
+    [valor] => 10.00
+    [status] => PENDING
+)
+
+10/08/2025 00:41:52 - DEPÓSITO ATUALIZADO PARA PAID
+10/08/2025 00:41:52 - SALDO CREDITADO: R$ 10.00 para usuário 1
+10/08/2025 00:41:52 - USUÁRIO DATA: Array
+(
+    [indicacao] => 
+)
+
+10/08/2025 00:41:52 - USUÁRIO SEM INDICAÇÃO
+10/08/2025 00:41:52 - TRANSAÇÃO FINALIZADA COM SUCESSO

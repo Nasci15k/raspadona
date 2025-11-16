@@ -1,0 +1,7 @@
+# Ignorar arquivos e diretórios que não são necessários na imagem Docker
+.git
+.gitignore
+.DS_Store
+.env
+vendor/
+node_modules/

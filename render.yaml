@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: raspadinha-backend
+    env: docker
+    plan: free
+    # buildCommand e startCommand são definidos no Dockerfile
+    # buildCommand: docker build . -t raspadinha-backend
+    # startCommand: docker run -p 80:$PORT raspadinha-backend
+    envVars:
+      - key: DB_HOST
+        scope: all
+        value: localhost  # Será configurado no painel do Render
+      - key: DB_PORT
+        scope: all
+        value: "3306"
+      - key: DB_NAME
+        scope: all
+        value: raspadinha_db
+      - key: DB_USER
+        scope: all
+        value: raspadinha_user
+      - key: DB_PASSWORD
+        scope: all
+        sync: false  # Não sincronizar com Git por segurança
+      - key: SITE_NAME
+        scope: all
+        value: Nasci15k Raspadinhas
+      - key: APP_ENV
+        scope: all
+        value: production
+      - key: APP_DEBUG
+        scope: all
+        value: "false"
+
+  - type: pserv
+    name: raspadinha-mysql
+    env: mysql
+    plan: free
+    dbName: raspadinha_db
+    user: raspadinha_user
+    envVars:
+      - key: MYSQL_ROOT_PASSWORD
+        scope: all
+        sync: false
