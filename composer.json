@@ -1,14 +1,14 @@
 {
-    "name": "symfony/console",
+    "name": "symfony/string",
     "type": "library",
-    "description": "Eases the creation of beautiful and testable command line interfaces",
-    "keywords": ["console", "cli", "command-line", "terminal"],
+    "description": "Provides an object-oriented API to strings and deals with bytes, UTF-8 code points and grapheme clusters in a unified way",
+    "keywords": ["string", "utf8", "utf-8", "grapheme", "i18n", "unicode"],
     "homepage": "https://symfony.com",
     "license": "MIT",
     "authors": [
         {
-            "name": "Fabien Potencier",
-            "email": "fabien@symfony.com"
+            "name": "Nicolas Grekas",
+            "email": "p@tchwork.com"
         },
         {
             "name": "Symfony Community",
@@ -17,36 +17,25 @@
     ],
     "require": {
         "php": ">=8.2",
-        "symfony/deprecation-contracts": "^2.5|^3",
-        "symfony/polyfill-mbstring": "~1.0",
-        "symfony/service-contracts": "^2.5|^3",
-        "symfony/string": "^7.2"
+        "symfony/polyfill-ctype": "~1.8",
+        "symfony/polyfill-intl-grapheme": "~1.0",
+        "symfony/polyfill-intl-normalizer": "~1.0",
+        "symfony/polyfill-mbstring": "~1.0"
     },
     "require-dev": {
-        "symfony/config": "^6.4|^7.0",
-        "symfony/event-dispatcher": "^6.4|^7.0",
-        "symfony/http-foundation": "^6.4|^7.0",
-        "symfony/http-kernel": "^6.4|^7.0",
-        "symfony/dependency-injection": "^6.4|^7.0",
-        "symfony/lock": "^6.4|^7.0",
-        "symfony/messenger": "^6.4|^7.0",
-        "symfony/process": "^6.4|^7.0",
-        "symfony/stopwatch": "^6.4|^7.0",
-        "symfony/var-dumper": "^6.4|^7.0",
-        "psr/log": "^1|^2|^3"
-    },
-    "provide": {
-        "psr/log-implementation": "1.0|2.0|3.0"
+        "symfony/error-handler": "^6.4|^7.0",
+        "symfony/emoji": "^7.1",
+        "symfony/http-client": "^6.4|^7.0",
+        "symfony/intl": "^6.4|^7.0",
+        "symfony/translation-contracts": "^2.5|^3.0",
+        "symfony/var-exporter": "^6.4|^7.0"
     },
     "conflict": {
-        "symfony/dependency-injection": "<6.4",
-        "symfony/dotenv": "<6.4",
-        "symfony/event-dispatcher": "<6.4",
-        "symfony/lock": "<6.4",
-        "symfony/process": "<6.4"
+        "symfony/translation-contracts": "<2.5"
     },
     "autoload": {
-        "psr-4": { "Symfony\\Component\\Console\\": "" },
+        "psr-4": { "Symfony\\Component\\String\\": "" },
+        "files": [ "Resources/functions.php" ],
         "exclude-from-classmap": [
             "/Tests/"
         ]

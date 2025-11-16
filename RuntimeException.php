@@ -9,11 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Console\Exception;
+namespace Symfony\Component\String\Exception;
 
-/**
- * @author Jérôme Tamarelle <jerome@tamarelle.net>
- */
 class RuntimeException extends \RuntimeException implements ExceptionInterface
 {
 }

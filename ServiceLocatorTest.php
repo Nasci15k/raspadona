@@ -9,8 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\String\Exception;
+namespace Symfony\Contracts\Service\Test;
 
-interface ExceptionInterface extends \Throwable
-{
+class_alias(ServiceLocatorTestCase::class, ServiceLocatorTest::class);
+
+if (false) {
+    /**
+     * @deprecated since PHPUnit 9.6
+     */
+    class ServiceLocatorTest
+    {
+    }
 }
